@@ -6,8 +6,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.ssh.insert_key = false
 
-  config.vm.define 'jail-host' do |btsync|
-    btsync.vm.provision 'ansible', type: 'ansible' do |ansible|
+  config.vm.define 'jail-host' do |host|
+    host.vm.provision 'ansible', type: 'ansible' do |ansible|
       ansible.playbook = './.playbook.yaml'
     end
   end

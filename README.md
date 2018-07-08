@@ -155,7 +155,7 @@ Set this to true to use tarsnap for backup. Default: `false`.
 ##### tarsnap_keyfile
 
 The keyfile to use to backup using tarsnap. See tarsnap documentation how to
-create one. Default: None.
+create one. Default: ''.
 
 
 ### Package Repository

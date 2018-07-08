@@ -33,6 +33,7 @@ ssmtp_use_starttls: 'no'
 ssmtp_use_tls: 'no'
 
 tarsnap_enabled: false
+tarsnap_keyfile: ''
 
 ntp_servers:
   - '0.de.pool.ntp.org'

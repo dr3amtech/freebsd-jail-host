@@ -29,8 +29,9 @@
   zfs:
     name: '{{ host_srv_dataset }}'
     state: present
-    atime: off
-    mountpoint: '{{ host_srv_dir }}'
+    extra_zfs_properties:
+      atime: off
+      mountpoint: '{{ host_srv_dir }}'
 
 - name: Copy periodic conf for regular snapshots
   template:

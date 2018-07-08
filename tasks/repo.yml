@@ -24,7 +24,7 @@
 
 - name: Update build server repo data
   command: 'pkg update'
-  when: build_server_repo | changed
+  when: build_server_repo is changed
 
 - name: Install root certificate authorities
   pkgng:
