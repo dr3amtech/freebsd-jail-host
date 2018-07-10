@@ -2,7 +2,7 @@ VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = 'JoergFiedler/freebsd-11.1'
+  config.vm.box = 'JoergFiedler/freebsd-11.2'
   config.vm.synced_folder '.', '/vagrant', disabled: true
   config.ssh.insert_key = false
 
@@ -47,6 +47,7 @@ echo pf_enable=YES >> /etc/rc.conf
 echo pflog_enable=YES >> /etc/rc.conf
 echo 'firstboot_pkgs_list=\"awscli sudo bash python27\"' >> /etc/rc.conf
 mkdir -p /usr/local/etc/sudoers.d
+/usr/sbin/service pf start
 echo 'ec2-user ALL=(ALL) NOPASSWD: ALL' >> /usr/local/etc/sudoers.d/ec2-user"
     aws.block_device_mapping = [
         {
