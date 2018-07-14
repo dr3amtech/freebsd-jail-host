@@ -21,7 +21,7 @@ host_ioc_host: 'download.freebsd.org'
 host_srv_dir: '/srv'
 host_srv_zpool_name: 'tank'
 host_srv_dataset: '{{ host_srv_zpool_name }}/srv'
-host_ioc_release_version: '11.1-RELEASE'
+host_ioc_release_version: '11.2-RELEASE'
 
 ssmtp_root: 'freebsd-jail-host'
 ssmtp_rewrite_domain: 'maildrop.cc'
