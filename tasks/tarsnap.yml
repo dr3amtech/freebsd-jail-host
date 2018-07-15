@@ -1,4 +1,3 @@
----
 - name: Install additional packages
   pkgng:
     name: '{{ item }}'

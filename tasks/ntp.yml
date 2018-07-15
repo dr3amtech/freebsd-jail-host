@@ -1,4 +1,3 @@
----
 - name: Copy ntp config
   template:
     src: 'ntp.conf.j2'

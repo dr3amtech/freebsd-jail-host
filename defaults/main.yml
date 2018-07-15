@@ -1,4 +1,3 @@
----
 # defaults file for jail_host
 host_net_int_if: 'lo0'
 host_net_int_ip: '10.1.0.1'

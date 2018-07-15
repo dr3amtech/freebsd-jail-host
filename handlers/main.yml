@@ -1,4 +1,3 @@
----
 # handlers file for jail_host
 - name: Start iocage
   command: service iocage start

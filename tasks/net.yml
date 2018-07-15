@@ -1,4 +1,3 @@
----
 - name: Configure internal ip on jails network interface
   lineinfile:
     dest: '/etc/rc.conf'
