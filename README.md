@@ -150,7 +150,7 @@ Uses TLS when talking to SMTP server. Default: `'no'`.
 
 ##### tarsnap_enabled
 
-Set this to true to use tarsnap for backup. Default: `false`.
+Set this to `yes` to use tarsnap for backup. Default: `no`.
 
 ##### tarsnap_keyfile
 
@@ -163,7 +163,7 @@ create one. Default: ''.
 ##### host_build_server_enabled
 
 Create an additional repository in `/usr/local/etc/pkg/repos/` using the URL and
-public key provided by the following two variables. Default: `false`.
+public key provided by the following two variables. Default: `no`.
 
 ##### host_build_server_pubkey
 

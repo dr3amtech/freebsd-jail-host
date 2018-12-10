@@ -5,6 +5,7 @@
 
 - name: Copy ssmtp.conf into place
   template:
+    backup: yes
     src: 'ssmtp.conf.j2'
     dest: '/usr/local/etc/ssmtp/ssmtp.conf'
 

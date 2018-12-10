@@ -1,5 +1,6 @@
 - name: Copy pf.conf
   template:
+    backup: yes
     src: 'pf.conf.j2'
     dest: '/etc/pf.conf'
     mode: '0644'
@@ -10,7 +11,7 @@
   command: 'touch /etc/pf.table.nat-jails'
   args:
     creates: '/etc/pf.table.nat-jails'
-    warn: false
+    warn: no
   notify:
     - Reload pf
 
@@ -18,7 +19,7 @@
   command: 'touch /etc/pf.anchor.nat-jail.conf'
   args:
     creates: '/etc/pf.anchor.nat-jail.conf'
-    warn: false
+    warn: no
   notify:
     - Reload pf
 
@@ -26,7 +27,7 @@
   command: 'touch /etc/pf.anchor.rdr-jail.conf'
   args:
     creates: '/etc/pf.anchor.rdr-jail.conf'
-    warn: false
+    warn: no
   notify:
     - Reload pf
 
@@ -34,7 +35,7 @@
   command: 'touch /etc/pf.anchor.rls-jail.conf'
   args:
     creates: '/etc/pf.anchor.rls-jail.conf'
-    warn: false
+    warn: no
   notify:
     - Reload pf
 

@@ -6,5 +6,5 @@
   pkgng:
     name: '{{ item }}'
     state: present
-  with_items:
-  - tmux
+  loop:
+    - tmux

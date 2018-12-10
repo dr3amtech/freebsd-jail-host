@@ -1,5 +1,6 @@
 - name: Configure internal ip on jails network interface
   lineinfile:
+    backup: yes
     dest: '/etc/rc.conf'
     state: present
     line: 'ifconfig_{{ host_net_int_if }}_alias0="inet {{ host_net_int_ip }} netmask 255.255.255.255"'
@@ -20,6 +21,7 @@
 
 - name: Add hostname to rc.conf
   lineinfile:
+    backup: yes
     dest: '/etc/rc.conf'
     state: present
     regexp: '^hostname='

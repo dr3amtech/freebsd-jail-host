@@ -7,7 +7,7 @@ python: 2.7
 install:
 - wget https://releases.hashicorp.com/vagrant/1.9.7/vagrant_1.9.7_x86_64.deb
 - sudo dpkg -i vagrant_1.9.7_x86_64.deb
-- pip install ansible==2.6.1
+- pip install ansible==2.7.0
 - pip install netaddr
 
 before_script:

@@ -1,5 +1,6 @@
 - name: Copy ntp config
   template:
+    backup: yes
     src: 'ntp.conf.j2'
     dest: '/etc/ntp.conf'
 

@@ -10,12 +10,14 @@
 
 - name: Copy build server key
   copy:
+    backup: yes
     src: '{{ host_build_server_pubkey }}'
     dest: '/usr/local/etc/ssl/poudriere.pub'
   when: host_build_server_enabled
 
 - name: Install build server repo
   template:
+    backup: yes
     src: 'poudriere.conf.j2'
     dest: '/usr/local/etc/pkg/repos/poudriere.conf'
   register: build_server_repo
