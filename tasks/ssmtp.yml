@@ -5,7 +5,7 @@
 
 - name: Copy ssmtp.conf into place
   template:
-    backup: yes
+    backup: '{{ backup_old_files }}'
     src: 'ssmtp.conf.j2'
     dest: '/usr/local/etc/ssmtp/ssmtp.conf'
 
