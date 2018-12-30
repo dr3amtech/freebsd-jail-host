@@ -16,6 +16,7 @@ host_sshd_authorized_keys_file: 'vagrant_pub_key'
 host_sshd_port: 22
 host_sshd_user: 'vagrant'
 
+host_ioc_dataset: '{{ host_ioc_zpool_name }}/iocage'
 host_ioc_dir: '/iocage'
 host_ioc_host: 'download.freebsd.org'
 host_ioc_release_version: '11.2-RELEASE'

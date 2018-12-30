@@ -14,6 +14,14 @@
   command: 'zpool create {{ host_ioc_zpool_name }} {{ host_ioc_zpool_devices }}'
   when: "'no such pool' in ioc_zpool_status.stderr"
 
+- name: Create ioc dataset
+  zfs:
+    name: '{{ host_ioc_dataset }}'
+    state: present
+    extra_zfs_properties:
+      atime: off
+      mountpoint: '{{ host_ioc_dir }}'
+
 - name: Check if srv zpool exists
   command: 'zpool status {{ host_srv_zpool_name }}'
   register: srv_zpool_status
